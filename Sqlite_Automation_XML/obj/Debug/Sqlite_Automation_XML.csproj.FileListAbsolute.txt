@@ -1,0 +1,10 @@
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\Sqlite_Automation_XML.exe.config
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\Sqlite_Automation_XML.exe
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\Sqlite_Automation_XML.pdb
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\obj\Debug\Sqlite_Automation_XML.csprojAssemblyReference.cache
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\obj\Debug\Sqlite_Automation_XML.csproj.CopyComplete
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\obj\Debug\Sqlite_Automation_XML.exe
+C:\Users\User\Documents\C#\Experiments\Sqlite_Automation_XML\Sqlite_Automation_XML\obj\Debug\Sqlite_Automation_XML.pdb
