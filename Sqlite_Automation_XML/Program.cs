@@ -58,11 +58,6 @@ namespace Sqlite_Automation_XML
         {
             Console.WriteLine("File: {0} changed at time: {1}", e.Name, DateTime.Now.ToLocalTime());
         }
-      
-        static void AddNewQuote(string db_CSTRING, string filePath) 
-        { 
-            
-        }
 
         static void ReadQuote(string xmlFileName) 
         {
@@ -73,32 +68,7 @@ namespace Sqlite_Automation_XML
             Quote_Job qJob = new Quote_Job();
             while (xmlReader.Read())
             {
-                //Console.WriteLine(xmlReader.Name); //print the tag name
-
-                //switch (xmlReader.NodeType)
-                //{
-                //    case XmlNodeType.Element: // The node is an element.
-                //        Console.Write("<" + xmlReader.Name);
-                //        Console.WriteLine(">");
-                //        break;
-                //    case XmlNodeType.Text: //Display the text in each element.
-                //        Console.WriteLine(xmlReader.Value);
-                //        break;
-                //    case XmlNodeType.EndElement: //Display the end of the element.
-                //        Console.Write("</" + xmlReader.Name);
-                //        Console.WriteLine(">");
-                //        break;
-                //}
-
-                /* this does not work
-                if (xmlReader.Name == "HOURS") 
-                {
-                   // string something = xmlReader.Value.ToString();
-                    Console.WriteLine(xmlReader.Value);
-                  //  Console.WriteLine(something.GetType());
-                }
-                */
-
+               
                 switch (xmlReader.NodeType) 
                 {
                     case XmlNodeType.Element:
@@ -154,93 +124,9 @@ namespace Sqlite_Automation_XML
                 
         }
 
-        static string GetTagValue(string xmlTag, XmlTextReader xmlReader) 
-        {
-            switch (xmlTag)
-            {
-                case "QUOTEID":
-                    return xmlReader.Value;
-                  
-                case "QUOTEDESC":
-                    return xmlReader.Value;
-                   
-                case "REVISIONDATE":
-                    return xmlReader.Value;
-                  
-                case "DELADDR3":
-                    return xmlReader.Value;
-                    
-                case "SALESPERSON":
-                    return xmlReader.Value;
-                  
-                case "CONTACTPERSON":
-                    return xmlReader.Value;
-                   
-                case "COSTPRICE":
-                    return xmlReader.Value;
-                   
-                case "GROSSPRICE":
-                    return xmlReader.Value;
-                   
-                case "JOBDISCPCNT":
-                    return xmlReader.Value;
-                  
-                case "NETQUOTATION":
-                    return xmlReader.Value;
-                   
-                case "HOURS":
-                    return xmlReader.Value;
-                default:
-                    return ""; 
-
-            }
-        }
         static void MoveFileToBackupFolder(string xmlFile) 
         {
             File.Move("xml\\"+xmlFile,"bkp\\"+xmlFile);
-        }
-
-        [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
-        private static void Run()
-        {
-          //  string[] args = Environment.GetCommandLineArgs();
-
-            // If a directory is not specified, exit program.
-            //if (args.Length != 2)
-            //{
-            //    // Display the proper way to call the program.
-            //    Console.WriteLine("Usage: Watcher.exe (directory)");
-            //    return;
-            //}
-
-            // Create a new FileSystemWatcher and set its properties.
-            using (FileSystemWatcher watcher = new FileSystemWatcher())
-            {
-              // watcher.Path = args[1];
-                watcher.Path = @"xml";
-                // Watch for changes in LastAccess and LastWrite times, and
-                // the renaming of files or directories.
-                watcher.NotifyFilter = NotifyFilters.LastAccess
-                                     | NotifyFilters.LastWrite
-                                     | NotifyFilters.FileName
-                                     | NotifyFilters.DirectoryName;
-
-                // Only watch text files.
-                watcher.Filter = "*.txt";
-
-                // Add event handlers.
-                watcher.Changed += OnChanged;
-                watcher.Created += OnChanged;
-                watcher.Deleted += OnChanged;
-                watcher.Renamed += OnRenamed;
-
-                // Begin watching.
-                watcher.EnableRaisingEvents = true;
-
-                // Wait for the user to quit the program.
-                Console.WriteLine("Press 'q' to quit the sample.");
-                while (Console.Read() != 'q') ;
-            }
         }
 
         // Define the event handlers.
