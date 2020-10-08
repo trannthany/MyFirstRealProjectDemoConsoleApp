@@ -49,7 +49,7 @@ namespace Sqlite_Automation_XML
         {
             Console.WriteLine("File: {0} created at time: {1}", e.Name, DateTime.Now.ToLocalTime());
             if(Path.GetExtension(e.Name) == ".xml")
-                ReadQuote(e.Name);
+                CreateQuote(e.Name);
             else
                 Console.WriteLine("I read xml only!!");
         }
@@ -59,7 +59,7 @@ namespace Sqlite_Automation_XML
             Console.WriteLine("File: {0} changed at time: {1}", e.Name, DateTime.Now.ToLocalTime());
         }
 
-        static void ReadQuote(string xmlFileName) 
+        static void CreateQuote(string xmlFileName) 
         {
             string path = "xml\\"+xmlFileName;
             XmlTextReader xmlReader = new XmlTextReader(path);
